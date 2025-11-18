@@ -1,3 +1,4 @@
 # Oslo_bikes_analysis
 Analyzing data from bike rentals in Oslo 
-<img width="594" height="397" alt="image" src="https://github.com/user-attachments/assets/50ee2dfa-1510-4a9f-8ac7-a3e688075602" />
+I was looking to do a project of of my own and since I am really interested in urban mobility I decided to explore movement patterns of rental bikes or scooters. After 
+a short search I found a publicy avilible dataset by 
