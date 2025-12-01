@@ -7,11 +7,9 @@ Hi! My name is Lev, and I’m a data analyst with 2.5 years of experience. I hav
 
 I am particularly interested in urban mobility, so I decided to explore the movement patterns of rental bikes or scooters. After a short search, I found a publicly available dataset by  https://oslobysykkel.no/en that contained data about where and when a ride started, and where and when it ended. 
 
-The data was stored as JSON files, and there was a separate file for each month. After a short exploration, I downloaded all the files for the year 2025, from January to September. Then, I created an appropriate table in MS SQL Studio and wrote a procedure ([https://github.com/Levfinkel/Oslo_bikes_analysis/blob/main/Ingest oslo trips.sql](https://github.com/Levfinkel/Oslo_bikes_analysis/blob/main/Ingest%20oslo%20trips.sql)) to upload the files into the table.
+The data was stored as JSON files, and there was a separate file for each month. After a short exploration, I downloaded all the files for the year 2025, from January to September. Then, I created an appropriate table in MS SQL Studio and wrote a procedure (https://github.com/Levfinkel/Oslo_bikes_analysis/blob/main/Ingest%20oslo%20trips.sql) to upload the files into the table.
 
 Then I added ride_id to make working to create a unique identifier, cleaned up some doubles (props to the Oslo bikes, there were very few of them), and converted the time from UTC into Oslo time. After that, the data was ready for further exploration with Tableau. Initially, I intended to set up a direct connection from MS SQL Server to Tableau, but it turned out that Tableau Public doesn’t allow that, so I had to connect MS SQL Server to Excel, and Excel to Tableau.
-
-~~After a short exploration, I downloaded the data with this procedure, cleaned it up a bit, copied it to an Excel table, and from there to Tableau. If I had a paid version, I could have connected it straight to MS SQL Server, but it costs 75$/month, so it wasn’t the way.~~ 
 
 First, I generated a graph detailing the number of rides by day throughout the year, which already gave me ideas for two possible hypotheses.
 
@@ -25,8 +23,6 @@ First, I generated a graph detailing the number of rides by day throughout the y
 1. First, I decided to explore the hypothesis about the difference between weekends and weekdays. I built the graph detailing the average daily usage of the bikes, and it indeed showed that usage on weekends is much lower than on weekdays.
 
 ![image.png](attachment:23209401-c85e-49eb-98a3-5000b9841e4f:image.png)
-
-~~And indeed, if you cut out weekends, you still get a pretty spiky graph, but without regular drops. It prompted me to investigate it further, and I found some interesting facts.~~
 
 I wanted to see how much lower exactly, so I built the graph comparing average daily usage on weekdays VS weekends throughout the year, and it showed that the average number of rides on weekends was roughly 35% lower than on weekdays.
 
