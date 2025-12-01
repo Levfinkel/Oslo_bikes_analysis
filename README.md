@@ -1,5 +1,4 @@
 # Oslo_bikes_analysis
-# Oslo bikes
 
 Hi! My name is Lev, and I’m a data analyst with 2.5 years of experience. I have been without a job for a while,  and one of the problems that prevented me from landing a job was the lack of recent projects that could demonstrate my skills. The Idea was to find a dataset about something I’m interested in, derive some hypotheses from the data using Tableau and SQL, and either confirm or reject them. 
 
@@ -13,7 +12,9 @@ Then I added ride_id to make working to create a unique identifier, cleaned up s
 
 First, I generated a graph detailing the number of rides by day throughout the year, which already gave me ideas for two possible hypotheses.
 
-![image.png](attachment:5cf4c404-a825-4567-8f34-bbff259461d7:image.png)
+<p align="center">
+  <img src="Rides_by_day.png" width="80%">
+</p>
 
 1. There were regular drops in the number of rides every few days, so I assumed that the most likely cause was the difference between weekends and weekdays.
 2. There was a clear correlation between the time of year and the number of rides, which can probably be explained by the weather.
@@ -22,15 +23,24 @@ First, I generated a graph detailing the number of rides by day throughout the y
 
 1. First, I decided to explore the hypothesis about the difference between weekends and weekdays. I built the graph detailing the average daily usage of the bikes, and it indeed showed that usage on weekends is much lower than on weekdays.
 
-![image.png](attachment:23209401-c85e-49eb-98a3-5000b9841e4f:image.png)
+<p align="center">
+  <img src="Weekend_VS_weekday_week.png" width="80%">
+</p>
+
 
 I wanted to see how much lower exactly, so I built the graph comparing average daily usage on weekdays VS weekends throughout the year, and it showed that the average number of rides on weekends was roughly 35% lower than on weekdays.
 
-![image.png](attachment:bbd6fd6b-5915-4bab-8516-0d0b602f05f2:image.png)
+<p align="center">
+  <img src="Weekend_VS_weekday_year.png" width="80%">
+</p>
+
 
 1. When I saw this difference in the number of rides between weekdays and weekends, I thought that there might also be a difference in the hourly distribution of rides.
 
-![image.png](attachment:7afe7b25-3644-4f9a-b36f-a730279defb3:image.png)
+<p align="center">
+  <img src="Rides_by_hour.png" width="80%">
+</p>
+
 
 And indeed, the difference was huge! On weekdays, there are two spikes around the start and end of the workday, which obviously means that people use the bikes to commute to work, while on weekends, when people can sleep in, there is one spike, and the distribution is much smoother.
 
@@ -44,9 +54,9 @@ There were more parameters than I ever knew existed, so I chose three that influ
 
 When I chose them, I downloaded the data and appended it to the existing table. I refreshed the MS SQL - Excel - Tableau connection, and without much hassle, the weather data was ready to be explored.  
 
-![image.png](attachment:3689975a-bd43-4164-84a2-77d18e876101:image.png)
-
-~~The results were not what I expected - I thought that precipitation would influence the number of rides per day much more. Another curious thing was that at the highest temperature, the ridership would be lowered pretty significantly, even though it was only 25 °C max.~~
+<p align="center">
+  <img src="Rides_and_weather.png" width="80%">
+</p>
 
 I expected, based on my own experience, that the influence of the temperature and precipitation would be more or less the same, and the wind’s would be lower but still considerable. In order to explore those assumptions, I built two graphs for each weather parameter: the number of rides by day + daily weather, and the correlation of the parameter in question and the number of rides. 
 
