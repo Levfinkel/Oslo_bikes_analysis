@@ -70,7 +70,7 @@ First, I generated a graph detailing the number of rides by day throughout the y
 I wanted to see how much lower exactly, so I built the graph comparing average daily usage on weekdays VS weekends throughout the year, and it showed that the average number of rides on weekends was roughly 35% lower than on weekdays.
 
 <p align="center">
-  <img src="Weekend_VS_weekday_year.png" width="80%">
+  <img src="Weekend_VS_weekday_year.png" width="30%">
 </p>
 
 
@@ -94,7 +94,7 @@ There were more parameters than I ever knew existed, so I chose three that influ
 When I chose them, I downloaded the data and appended it to the existing table. I refreshed the MS SQL - Excel - Tableau connection, and without much hassle, the weather data was ready to be explored.  
 
 <p align="center">
-  <img src="Rides_and_weather.png" width="80%">
+  <img src="Rides_and_weather.png" width="120%">
 </p>
 
 I expected, based on my own experience, that the influence of the temperature and precipitation would be more or less the same, and the wind’s would be lower but still considerable. In order to explore those assumptions, I built two graphs for each weather parameter: the number of rides by day + daily weather, and the correlation of the parameter in question and the number of rides. 
