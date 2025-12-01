@@ -1,5 +1,7 @@
 # Oslo_bikes_analysis
 
+Hi! My name is Lev, and I’m a data analyst with 2.5 years of experience. I have been without a job for a while,  and one of the problems that prevented me from landing a job was the lack of recent projects that could demonstrate my skills. The Idea was to find a dataset about something I’m interested in, derive some hypotheses from the data using Tableau and SQL, and either confirm or reject them. 
+
 ### TL;DR
 
 Goals of the project: 
@@ -37,9 +39,6 @@ Results of the research:
 - Weather
     - Temperature influences the number of rides much more than precipitation ( R-squared of 0,67 for temperature VS 0,1 for precipitation); Starting from 18.9 °C, the number of rides decreases, presumably due to the heat.
     - The correlation between wind speed and the number of rides is negligible, with an R-squared of only 0,02.
-
-
-Hi! My name is Lev, and I’m a data analyst with 2.5 years of experience. I have been without a job for a while,  and one of the problems that prevented me from landing a job was the lack of recent projects that could demonstrate my skills. The Idea was to find a dataset about something I’m interested in, derive some hypotheses from the data using Tableau and SQL, and either confirm or reject them. 
 
 ### Finding and exploring the data
 
