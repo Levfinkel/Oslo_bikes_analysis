@@ -44,7 +44,8 @@ Results of the research:
 
 I am particularly interested in urban mobility, so I decided to explore the movement patterns of rental bikes or scooters. After a short search, I found a publicly available dataset by  https://oslobysykkel.no/en that contained data about where and when a ride started, and where and when it ended. 
 
-The data was stored as JSON files, and there was a separate file for each month. After a short exploration, I downloaded all the files for the year 2025, from January to September. Then, I created an appropriate table in MS SQL Studio and wrote a procedure (https://github.com/Levfinkel/Oslo_bikes_analysis/blob/main/Ingest%20oslo%20trips.sql) to upload the files into the table.
+The data was stored as JSON files, and there was a separate file for each month. After a short exploration, I downloaded all the files for the year 2025, from January to September. Then, I created an appropriate table in MS SQL Studio and wrote a procedure ([Ingest oslo trips.sql](https://github.com/Levfinkel/Oslo_bikes_analysis/blob/main/Ingest%20oslo%20trips.sql)
+) to upload the files into the table.
 
 Then I added ride_id to make working to create a unique identifier, cleaned up some doubles (props to the Oslo bikes, there were very few of them), and converted the time from UTC into Oslo time. After that, the data was ready for further exploration with Tableau. Initially, I intended to set up a direct connection from MS SQL Server to Tableau, but it turned out that Tableau Public doesn’t allow that, so I had to connect MS SQL Server to Excel, and Excel to Tableau.
 
