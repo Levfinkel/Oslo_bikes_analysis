@@ -1,5 +1,44 @@
 # Oslo_bikes_analysis
 
+### TL;DR
+
+Goals of the project: 
+
+- Find and explore a dataset
+- Derive hypotheses from the data, and either confirm or reject them
+- Practice my SQL and Tableau skills
+
+Sources used:
+
+- https://oslobysykkel.no/en
+- [Seklima observations](https://seklima.met.no/observations/).
+
+Tools used: 
+
+- MS SQL Server
+- Chat GTP
+- Tableau Public
+- Excel
+
+Hypotheses tested:
+
+- Hypotheses about rides on weekends VS weekdays
+    - There are fewer rides on weekends than on weekdays
+    - The rides are distributed differently on weekdays and weekends
+- Hypotheses about the weather
+    - Temperature and precipitation influence the number of rides to the same degree
+    - Wind speed influences the number of rides less than two other factors, but is still considered
+
+Results of the research:
+
+- Weekends VS weekdays
+    - There are indeed 35% fewer rides on weekends than on weekdays
+    - Yes, on weekends, ride distribution is akin to normal distribution, while on weekdays, there are two spikes in the ridership around the start and the end of the workday
+- Weather
+    - Temperature influences the number of rides much more than precipitation ( R-squared of 0,67 for temperature VS 0,1 for precipitation); Starting from 18.9 °C, the number of rides decreases, presumably due to the heat.
+    - The correlation between wind speed and the number of rides is negligible, with an R-squared of only 0,02.
+
+
 Hi! My name is Lev, and I’m a data analyst with 2.5 years of experience. I have been without a job for a while,  and one of the problems that prevented me from landing a job was the lack of recent projects that could demonstrate my skills. The Idea was to find a dataset about something I’m interested in, derive some hypotheses from the data using Tableau and SQL, and either confirm or reject them. 
 
 ### Finding and exploring the data
@@ -71,41 +110,3 @@ This project helped me practice the full data workflow: loading and cleaning raw
 Weather effects were more mixed than I expected. Temperature had the strongest influence, with a clear increase in rides on warmer days until it became too hot. Precipitation had only a small effect, and wind almost none. 
 
 Overall, this analysis not only helped me build a complete end-to-end project but also gave me a deeper understanding of mobility behavior in an urban environment. It demonstrated how combining domain knowledge, structured exploration, and statistical validation can lead to insights that are both intuitive and surprising.
-
-### TL;DR
-
-Goals of the project: 
-
-- Find and explore a dataset
-- Derive hypotheses from the data, and either confirm or reject them
-- Practice my SQL and Tableau skills
-
-Sources used:
-
-- https://oslobysykkel.no/en
-- [Seklima observations](https://seklima.met.no/observations/).
-
-Tools used: 
-
-- MS SQL Server
-- Chat GTP
-- Tableau Public
-- Excel
-
-Hypotheses tested:
-
-- Hypotheses about rides on weekends VS weekdays
-    - There are fewer rides on weekends than on weekdays
-    - The rides are distributed differently on weekdays and weekends
-- Hypotheses about the weather
-    - Temperature and precipitation influence the number of rides to the same degree
-    - Wind speed influences the number of rides less than two other factors, but is still considered
-
-Results of the research:
-
-- Weekends VS weekdays
-    - There are indeed 35% fewer rides on weekends than on weekdays
-    - Yes, on weekends, ride distribution is akin to normal distribution, while on weekdays, there are two spikes in the ridership around the start and the end of the workday
-- Weather
-    - Temperature influences the number of rides much more than precipitation ( R-squared of 0,67 for temperature VS 0,1 for precipitation); Starting from 18.9 °C, the number of rides decreases, presumably due to the heat.
-    - The correlation between wind speed and the number of rides is negligible, with an R-squared of only 0,02.
